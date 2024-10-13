@@ -1,0 +1,116 @@
+body{
+    background-color: #212121;
+}
+
+.login{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 97vh;
+    border: none;
+    
+}
+
+input{
+    height: 5vh;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid rgb(143, 143, 143);
+    width: 30vw;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 3vh;
+    color: rgb(184, 184, 184);
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+i{
+    font-size: 3vh;
+    color: rgb(184, 184, 184);
+    padding-right: 1.2vw;
+}
+
+
+#mail{
+padding-left: 0.18vw;
+
+}
+
+.montserrat-Montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+#go{
+    border: none;
+    width: 32.819vw;
+    height: 3vh;
+    transition: 0.3s;
+    background-color: #4b4b4b;
+    color: rgb(184, 184, 184);
+    font-size: 2vh;
+}
+#go:hover{
+    background-color: #383838;
+}
+
+#OL{
+    border: none;
+    width: 32.819vw;
+    height: 3vh;
+    transition: 0.3s;
+    background-color: #4b4b4b;
+    color: rgb(184, 184, 184);
+    font-size: 2vh;
+}
+
+
+#OL:hover{
+    background-color: #383838;
+}
+
+#GNO{
+    border: none;
+    width: 32.819vw;
+    height: 3vh;
+    transition: 0.3s;
+    background-color: #4b4b4b;
+    color: rgb(184, 184, 184);
+    font-size: 2vh;
+}
+
+#GNO:hover{
+    background-color: #383838;
+}
+
+#wrong{
+    border: none;
+    width: 32.819vw;
+    height: 3vh;
+    transition: 0.3s;
+    background-color: #4b4b4b00;
+    color: rgb(184, 184, 184);
+    font-size: 2vh;
+}
+#wrong:hover{
+    background-color: #38383800;
+}
+
+.todo{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 97vh;
+    border: none;
+    flex-direction: column;
+    color: rgb(184, 184, 184);
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 1.3vh;
+}
+
+.todo button{
+    width: 32.819vw;
+}

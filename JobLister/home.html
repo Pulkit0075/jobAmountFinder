@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gintama</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+<body> 
+    <div class="jobReq">
+        <div class="mainTextInput">
+            <form id="jobForm" method="post" action="userDetail.php">
+                <input type="text" placeholder="What do you want me to do?" id="JobInput" required>
+                <button id="icon" type="submit"><i class="fas fa-caret-right" ></i></button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        // Function to handle the redirection to req.html with the user input as a query parameter
+        function redirectToReq(input) {
+            // Encode the user input to be safely included in a URL
+            const encodedInput = encodeURIComponent(input);
+            // Redirect to req.html with the user's input included as a query parameter
+            window.location.href = `req.html?job=${encodedInput}`;
+        }
+
+        // Add an event listener for form submission (pressing Enter or button click)
+        document.getElementById("jobForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent the form from submitting normally
+            // Get the value of the user's input
+            const userInput = document.getElementById("JobInput").value;
+            // Redirect to req.html with the user input as a query parameter
+            redirectToReq(userInput);
+        });
+    </script>
+</body>
+</html>

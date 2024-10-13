@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gintama</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <script>
+        // Function to get the value of a specific cookie
+        function getCookie(name) {
+            let cookieArr = document.cookie.split(";");
+            for (let i = 0; i < cookieArr.length; i++) {
+                let cookiePair = cookieArr[i].split("=");
+                if (name === cookiePair[0].trim()) {
+                    return decodeURIComponent(cookiePair[1]);
+                }
+            }
+            return null;
+        }
+
+        // Function to display username from the email cookie (extract first part of the email)
+        function displayUsername() {
+            let email = getCookie("user_email"); // assuming cookie stores the email
+            if (email) {
+                let username = email.split("@")[0]; // extract first part before '@'
+                document.getElementById("greeting").textContent = `Hi ${username}`;
+            } else {
+                document.getElementById("greeting").textContent = "Hi user";
+            }
+        }
+
+        window.onload = displayUsername;
+    </script>
+</head>
+<body>
+    <div class="todo">
+        <h1 id="greeting">Hi user</h1>
+        <button onclick="window.location.replace('orderProgress.html')" id="OL">Order List</button><br>
+        <button onclick="window.location.replace('home.html')" id="GNO">Get a new order</button>
+    </div>
+</body>
+</html>
